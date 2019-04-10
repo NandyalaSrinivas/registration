@@ -1,0 +1,13 @@
+<form action="{% url 'studentinfo:password'%}" method="post" enctype="multipart/form-data">
+       {%csrf_token%}
+    <h1>plzz set the password</h1>
+    User name:<input type ='text' name="username"><br/><br/>
+    Email:<input type ='email' name="email"><br/><br>
+    Password:<input type ='password' name="password"><br/><br>
+
+    <input type="Submit" name="Submit">
+</form>
+
+
+
+

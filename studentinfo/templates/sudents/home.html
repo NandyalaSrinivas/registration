@@ -1,0 +1,12 @@
+<h1>Home Page</h1>
+{% if index %}
+{% for student in index %}
+<title>Regisration Page</title>
+  {{forloop.counter}})<a href="{% url 'studentinfo:student_detail' student.id%}">{{student.first_name}}</a><br>
+{% endfor %}
+ {% else %}
+<p>no students information </p>
+{% endif %}
+
+<br><a href="{% url 'studentinfo:create' %}">Student Registration Page</a><br><br>
+<a href="{% url 'studentinfo:user_login' %}">Logout</a><br><br>

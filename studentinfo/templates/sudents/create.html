@@ -1,0 +1,32 @@
+<form action="{% url 'studentinfo:create'%}" method="post" enctype="multipart/form-data">
+    {% csrf_token%}
+     <h1> Registration page</h1>
+
+    <h3>Please fill your details</h3>
+
+    first_name : <input type="text" name="first_name">  last_name : <input type="text" name="last_name">  email_id : <input type="email" name="email_id"> <br><br>
+
+    date_of_birth : <input type="date" name="date_of_birth"> mobile_no:<input type="number" name=" mobile_no"><br><br>
+
+
+    address: <input type="text" name="address">  roll_no: <input type="text" name=" roll_no">   d_join_date : <input type="date" name="d_join_date"><br><br>
+
+
+    SSC: <input type="file" name="ssc">  inter: <input type="file" name="inter"><br><br>
+
+
+    degree: <input type="file" name="degree">  mca: <input type="file" name="mca"><br><br>
+
+
+
+    <input type="submit" name="Submit">
+
+
+</form>
+<h3>plese click submit buttun</h3>
+<BR><a href="{% url 'studentinfo:index' %}">Back</a><br><br>
+<BR><a href="{% url 'studentinfo:user_login' %}">Log in</a><br><br>
+<h3>Do you want logout </h3><h2>click logout buttun</h2>
+ <a href="{% url 'studentinfo:user_logout'%}"> Log out <   /a><br><br>
+
+
